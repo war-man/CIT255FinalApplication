@@ -49,5 +49,18 @@ namespace DAL
         {
             return _response;
         }
+
+        public Forecastday SelectByPeriod(int period)
+        {
+            Forecastday forecastDay = null;
+
+            //
+            // use LINQ to find the specific forecast day you wanted
+            //
+
+            forecastDay = _response.Forecast.Simpleforecast.Forecastdays.Forecastday.FirstOrDefault(fd => fd.Period == period);
+
+            return forecastDay;
+        }
     }
 }

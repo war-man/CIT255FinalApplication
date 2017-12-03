@@ -11,7 +11,7 @@ namespace Models
     public class Forecastday
     {
         [XmlElement(ElementName = "period")]
-        public string Period { get; set; }
+        public int Period { get; set; }
         [XmlElement(ElementName = "icon")]
         public string Icon { get; set; }
         [XmlElement(ElementName = "icon_url")]

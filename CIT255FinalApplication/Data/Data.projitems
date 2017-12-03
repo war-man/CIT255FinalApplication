@@ -12,4 +12,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)DataSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)InitializeDataFileXML.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

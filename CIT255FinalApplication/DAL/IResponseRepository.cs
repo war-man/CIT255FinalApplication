@@ -10,6 +10,7 @@ namespace DAL
     public interface IResponseRepository
     {
         Response SelectAll();
+        Forecastday SelectByPeriod(int period);
         //TODO: decide if need any other repository interface things
     }
 }

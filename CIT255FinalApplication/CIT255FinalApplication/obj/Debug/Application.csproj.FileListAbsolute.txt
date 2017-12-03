@@ -8,3 +8,8 @@ H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApp
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\obj\Debug\Application.csprojResolveAssemblyReference.cache
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\obj\Debug\CIT255FinalApplication.exe
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\obj\Debug\CIT255FinalApplication.pdb
+H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\bin\Debug\BusinessLayer.dll
+H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\bin\Debug\BusinessLayer.pdb
+H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\bin\Debug\Controller.dll
+H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\bin\Debug\Controller.pdb
+H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\CIT255FinalApplication\bin\Debug\Data.xml

@@ -16,6 +16,6 @@ namespace Data
 
         public const string dataFilePathAPI = "http://api.wunderground.com/api/" + APIKey + "/forecast10day/q/CA/" + zipCode + ".xml";
 
-        public const string dataFilePathLocal = "Data\\Data.xml";
+        public const string dataFilePathLocal = "Data.xml";
     }
 }

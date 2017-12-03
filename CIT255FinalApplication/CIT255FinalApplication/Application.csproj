@@ -50,6 +50,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{13ebdc83-357a-445a-9d76-95e1ffd04eeb}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{c403e0ec-b1f3-42ec-ae5f-f25e76aab6cb}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{d8786b16-bfb8-4f39-a795-c2957afdc199}</Project>
       <Name>DAL</Name>
@@ -59,6 +67,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\Data\Data.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

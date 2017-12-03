@@ -9,7 +9,7 @@ namespace Data
 {
     public class InitializeDataFileXML
     {
-        public static void AddTestData()
+        public static void PullDataApi()
         {
             
             //
@@ -27,6 +27,10 @@ namespace Data
             catch (Exception)
             {
                 Console.WriteLine("Whoops! We could not save the data from the Wunderground API for some reason");
+
+                Console.WriteLine("Press any key to continue.");
+
+                Console.ReadKey();
             }
         }
     }
