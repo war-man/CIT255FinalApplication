@@ -23,7 +23,7 @@ namespace Models
         [XmlElement(ElementName = "fcttext_metric")]
         public string Fcttext_metric { get; set; }
         [XmlElement(ElementName = "pop")]
-        public string Pop { get; set; }
+        public int Pop { get; set; }
         [XmlElement(ElementName = "date")]
         public Date Date { get; set; }
         [XmlElement(ElementName = "high")]

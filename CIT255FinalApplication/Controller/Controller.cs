@@ -63,11 +63,21 @@ namespace Controller
                 }
 
                 foreach (var fd in response.Forecast.Simpleforecast.Forecastdays.Forecastday)
-                {
+                {                    
                     Console.WriteLine(fd.Period);
                     Console.WriteLine(fd.Date.Weekday);
                     Console.WriteLine(fd.Pop);
                 }
+
+                ResponseBusiness responseBusiness2 = new ResponseBusiness(responseRepository);
+                Forecastday forecastDay;
+                using (responseBusiness2)
+                {
+                    forecastDay = responseBusiness2.SelectByPeriod(1);
+
+                }
+
+                Console.WriteLine($"We found the first day! {forecastDay.Date.Weekday}, {forecastDay.Date.Monthname} {forecastDay.Date.Day}");
 
                 Console.WriteLine("Press any key to exit");
 
