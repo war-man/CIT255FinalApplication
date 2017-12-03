@@ -56,5 +56,9 @@ namespace Models
         public string Maxhumidity { get; set; }
         [XmlElement(ElementName = "minhumidity")]
         public string Minhumidity { get; set; }
+        /// <summary>
+        /// this is a bool that does not come from the API, but is for internal use in the application
+        /// </summary>
+        public bool IsPlantingDay { get; set; }
     }
 }

@@ -53,36 +53,75 @@ namespace Controller
         {
             while (active)
             {
-                ResponseBusiness responseBusiness = new ResponseBusiness(responseRepository);
-
-                Response response;
-
-                using (responseBusiness)
-                {
-                    response = responseBusiness.SelectAll();
-                }
-
-                foreach (var fd in response.Forecast.Simpleforecast.Forecastdays.Forecastday)
-                {                    
-                    Console.WriteLine(fd.Period);
-                    Console.WriteLine(fd.Date.Weekday);
-                    Console.WriteLine(fd.Pop);
-                }
-
-                ResponseBusiness responseBusiness2 = new ResponseBusiness(responseRepository);
-                Forecastday forecastDay;
-                using (responseBusiness2)
-                {
-                    forecastDay = responseBusiness2.SelectByPeriod(1);
-
-                }
-
-                Console.WriteLine($"We found the first day! {forecastDay.Date.Weekday}, {forecastDay.Date.Monthname} {forecastDay.Date.Day}");
-
-                Console.WriteLine("Press any key to exit");
+                TestingAChange();
 
                 Console.ReadKey();
             }
+        }
+
+        private void TestingAChange()
+        {
+            ResponseBusiness responseBusiness = new ResponseBusiness(responseRepository);
+
+            Response response;
+
+            using (responseBusiness)
+            {
+                response = responseBusiness.SelectAll();
+            }
+
+            long lengthOfForecast = response.Forecast.Simpleforecast.Forecastdays.Forecastday.LongCount();
+
+            long oneLessThanFullList = lengthOfForecast - 1;
+
+            for (long index = 0; index < oneLessThanFullList; index++)
+            {
+                if (response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index + 1].Pop >= 50)
+                {
+                    response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index].IsPlantingDay = true;
+                }
+            }
+
+            foreach (var fd in response.Forecast.Simpleforecast.Forecastdays.Forecastday)
+            {
+                Console.WriteLine(fd.Date.Weekday);
+                Console.WriteLine(fd.Pop);
+                Console.WriteLine(fd.IsPlantingDay);
+                Console.WriteLine();
+            }
+        }
+
+        private void TestingMethods()
+        {
+            ResponseBusiness responseBusiness = new ResponseBusiness(responseRepository);
+
+            Response response;
+
+            using (responseBusiness)
+            {
+                response = responseBusiness.SelectAll();
+            }
+
+            foreach (var fd in response.Forecast.Simpleforecast.Forecastdays.Forecastday)
+            {
+                Console.WriteLine(fd.Period);
+                Console.WriteLine(fd.Date.Weekday);
+                Console.WriteLine(fd.Pop);
+            }
+
+            ResponseBusiness responseBusiness2 = new ResponseBusiness(responseRepository);
+            Forecastday forecastDay;
+            using (responseBusiness2)
+            {
+                forecastDay = responseBusiness2.SelectByPeriod(1);
+
+            }
+
+            Console.WriteLine($"We found the first day! {forecastDay.Date.Weekday}, {forecastDay.Date.Monthname} {forecastDay.Date.Day}");
+
+            Console.WriteLine("Press any key to exit");
+
+            Console.ReadKey();
         }
 
         #endregion
