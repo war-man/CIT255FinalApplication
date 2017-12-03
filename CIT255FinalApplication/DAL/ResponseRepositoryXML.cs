@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
-using Models;
+using Model;
 using Data;
 
 namespace DAL
@@ -15,18 +15,37 @@ namespace DAL
     /// </summary>
     public class ResponseRepositoryXML : IDisposable, IResponseRepository
     {
+        #region FIELDS
+
         private Response _response;
 
+        #endregion
+
+        #region CONSTRUCTORS
+        /// <summary>
+        /// the constructor for the repository that pulls data from the API
+        /// </summary>
         public ResponseRepositoryXML()
         {
             _response = ReadResponseData();
         }
 
+        #endregion
+
+        #region METHODS
+
+        /// <summary>
+        /// implements the Dispose() method to comply with the IDisposable interface
+        /// </summary>
         public void Dispose()
         {
             _response = null;
         }
 
+        /// <summary>
+        /// returns the whole forecast as a response object
+        /// </summary>
+        /// <returns></returns>
         public Response ReadResponseData()
         {
             Response response;
@@ -45,6 +64,9 @@ namespace DAL
             return response;
         }
 
+        /// <summary>
+        /// Writes to the repository file to serialize the data for data storage
+        /// </summary>
         public void Save()
         {
             StreamWriter sw = new StreamWriter(DataSettings.dataFilePathLocal, false);
@@ -57,11 +79,20 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// returns the whole forecast as a response object
+        /// </summary>
+        /// <returns></returns>
         public Response SelectAll()
         {
             return _response;
         }
 
+        /// <summary>
+        /// given the period number for the day, returns a forecastday
+        /// </summary>
+        /// <param name="period"></param>
+        /// <returns>forecastday</returns>
         public Forecastday SelectByPeriod(int period)
         {
             Forecastday forecastDay = null;
@@ -75,9 +106,7 @@ namespace DAL
             return forecastDay;
         }
 
-        public void Update(Response obj)
-        {
-            
-        }
+        #endregion
+
     }
 }

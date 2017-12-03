@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppEnum.cs" />
     <Compile Include="Avewind.cs" />
     <Compile Include="Date.cs" />
     <Compile Include="Features.cs" />

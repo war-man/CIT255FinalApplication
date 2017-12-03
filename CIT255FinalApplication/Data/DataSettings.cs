@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Data
 {
+    /// <summary>
+    /// Defines the record location of the Web API and the local storage
+    /// </summary>
     public static class DataSettings
     {
         /// <summary>

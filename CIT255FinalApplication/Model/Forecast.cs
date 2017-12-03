@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Models
+namespace Model
 {
     [XmlRoot(ElementName = "forecast")]
     public class Forecast

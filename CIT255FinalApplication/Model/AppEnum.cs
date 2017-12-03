@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class AppEnum
+    public class AppEnum
     {
+        /// <summary>
+        /// an enum to keep track of application flow
+        /// </summary>
+        public enum ManagerAction
+        {
+            None,
+            WelcomePage,
+            GetWeather,
+            CustomizePlantingDay,
+            AutoFillPlantingDays,
+            TogglePlantingDay,
+            Print,
+            Exit
+        }
     }
 }

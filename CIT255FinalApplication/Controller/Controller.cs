@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Models;
+using Model;
 using DAL;
 using BusinessLayer;
 
@@ -38,6 +38,9 @@ namespace Controller
 
         #region CONSTRUCTORS
 
+        /// <summary>
+        /// instantiate the repository for data type and start application
+        /// </summary>
         public Controller()
         {
             responseRepository = new ResponseRepositoryXML();
@@ -51,12 +54,142 @@ namespace Controller
 
         private void ApplicationControl()
         {
+            AppEnum.ManagerAction userActionChoice;
+
+            //TODO: View: call welcome screen
+            
+            userActionChoice = AppEnum.ManagerAction.None;
+
             while (active)
             {
-                TestingAChange();
+                Console.WriteLine("write your choice:");
+                string answer = Console.ReadLine();
 
-                Console.ReadKey();
+                switch (answer)
+                {
+                    case "welcome":
+                        userActionChoice = AppEnum.ManagerAction.WelcomePage;
+                        break;
+                    case "get":
+                        userActionChoice = AppEnum.ManagerAction.GetWeather;
+                        break;
+                    case "customize":
+                        userActionChoice = AppEnum.ManagerAction.CustomizePlantingDay;
+                        break;
+                    case "auto":
+                        userActionChoice = AppEnum.ManagerAction.AutoFillPlantingDays;
+                        break;
+                    case "toggle":
+                        userActionChoice = AppEnum.ManagerAction.TogglePlantingDay;
+                        break;
+                    default:
+                        break;
+                }
+                //TODO: View: get user action choice
+                
+
+                switch (userActionChoice)
+                {
+                    case AppEnum.ManagerAction.None:
+                        break;
+                    case AppEnum.ManagerAction.WelcomePage:
+                        WelcomePage();
+                        break;
+                    case AppEnum.ManagerAction.GetWeather:
+                        GetWeather();
+                        break;
+                    case AppEnum.ManagerAction.CustomizePlantingDay:
+                        CustomizePlantingDay();
+                        break;
+                    case AppEnum.ManagerAction.AutoFillPlantingDays:
+                        AutoFillPlantingDays();
+                        break;
+                    case AppEnum.ManagerAction.TogglePlantingDay:
+                        TogglePlantingDay();
+                        break;
+                    case AppEnum.ManagerAction.Print:
+                        Print();
+                        break;
+                    case AppEnum.ManagerAction.Exit:
+                        Exit();
+                        active = false;
+                        break;
+                    default:
+                        break;
+                }                
             }
+
+            //TODO: View: exit application
+        }
+
+        private void Exit()
+        {
+            //TODO: View: display the closing screen
+        }
+
+        private void Print()
+        {
+            //TODO: View: pop up a PDF with a printout or at least screenshot?
+        }
+
+        private void TogglePlantingDay()
+        {
+            //
+            // instantiate a responseBusiness class and pass the repository into it
+            //
+            ResponseBusiness responseBusiness = new ResponseBusiness(responseRepository);
+            Response response;
+
+            using (responseBusiness)
+            {
+                //TODO: View: update the planting day according to which day was clicked
+                //responseBusiness.TogglePlantingDay(event handler?);
+                responseBusiness.TogglePlantingDay(1);
+                responseBusiness.Save();
+            }
+
+            //TODO: View: display the updated planting days dynamically 
+        }
+
+        private void AutoFillPlantingDays()
+        {
+            //
+            // instantiate a responseBusiness class and pass the repository into it
+            //
+            ResponseBusiness responseBusiness = new ResponseBusiness(responseRepository);
+
+            using (responseBusiness)
+            {
+                responseBusiness.AutoFillPlantingDays();
+            }
+
+            //TODO: View: display the updated planting days dynamically        
+        }
+
+
+        private void CustomizePlantingDay()
+        {
+            //TODO: View: display the customize planting day form
+        }
+
+        private void GetWeather()
+        {
+            //
+            // instantiate a responseBusiness class and pass the repository into it
+            //
+            ResponseBusiness responseBusiness = new ResponseBusiness(responseRepository);
+            Response response;
+
+            using (responseBusiness)
+            {
+                response = responseBusiness.SelectAll();
+                //TODO: View: display fresh API pull form
+            }
+        }
+
+        private void WelcomePage()
+        {
+            //TODO: View: display welcome page
         }
 
         private void TestingAChange()
@@ -107,6 +240,7 @@ namespace Controller
                 Console.WriteLine(fd.Period);
                 Console.WriteLine(fd.Date.Weekday);
                 Console.WriteLine(fd.Pop);
+                Console.WriteLine(fd.IsPlantingDay);
             }
 
             ResponseBusiness responseBusiness2 = new ResponseBusiness(responseRepository);

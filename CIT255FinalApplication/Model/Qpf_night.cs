@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 
-namespace Models
+namespace Model
 {
     [XmlRoot(ElementName = "qpf_night")]
     public class Qpf_night
