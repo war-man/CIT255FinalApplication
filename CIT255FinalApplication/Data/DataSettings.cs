@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data
 {
-    public class DataSettings
+    public static class DataSettings
     {
         /// <summary>
         /// this key is provided by the Wunderground API and may be updated on their website

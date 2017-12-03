@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
 using Models;
-
+using Data;
 
 namespace DAL
 {
@@ -31,7 +31,7 @@ namespace DAL
         {
             Response response;
 
-            StreamReader sr = new StreamReader(Data.DataSettings.dataFilePathLocal);
+            StreamReader sr = new StreamReader(DataSettings.dataFilePathLocal);
 
             XmlSerializer deserializer = new XmlSerializer(typeof(Response), new XmlRootAttribute("response"));
 
