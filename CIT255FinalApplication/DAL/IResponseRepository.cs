@@ -11,6 +11,7 @@ namespace DAL
     {
         Response SelectAll();
         Forecastday SelectByPeriod(int period);
-        //TODO: decide if need any other repository interface things
+        void Update(Response obj);
+        void Save();
     }
 }

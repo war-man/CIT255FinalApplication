@@ -30,6 +30,11 @@ namespace BusinessLayer
             _responseRepository = null;
         }
 
+        public void Save()
+        {
+            _responseRepository.Save();
+        }
+
         public Response SelectAll()
         {
             return _responseRepository.SelectAll();
@@ -38,6 +43,27 @@ namespace BusinessLayer
         public Forecastday SelectByPeriod(int period)
         {
             return _responseRepository.SelectByPeriod(period);
+        }
+
+        //public void Update(Forecastday obj)
+        //{
+        //    _responseRepository.Update(obj);
+        //}
+
+        public void AutoFillPlantingDays()
+        {
+            Response response = _responseRepository.SelectAll();
+
+            long lengthOfForecast = response.Forecast.Simpleforecast.Forecastdays.Forecastday.LongCount();
+
+            long oneLessThanFullList = lengthOfForecast - 1;
+
+            for (long index = 0; index < oneLessThanFullList; index++)
+            {
+
+            }
+
+            _responseRepository.Save();
         }
     }
 }

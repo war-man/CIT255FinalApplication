@@ -45,6 +45,18 @@ namespace DAL
             return response;
         }
 
+        public void Save()
+        {
+            StreamWriter sw = new StreamWriter(DataSettings.dataFilePathLocal, false);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Response), new XmlRootAttribute("Response"));
+
+            using (sw)
+            {
+                serializer.Serialize(sw, _response);
+            }
+        }
+
         public Response SelectAll()
         {
             return _response;
@@ -61,6 +73,11 @@ namespace DAL
             forecastDay = _response.Forecast.Simpleforecast.Forecastdays.Forecastday.FirstOrDefault(fd => fd.Period == period);
 
             return forecastDay;
+        }
+
+        public void Update(Response obj)
+        {
+            
         }
     }
 }
