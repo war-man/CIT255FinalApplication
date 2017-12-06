@@ -10,7 +10,7 @@ namespace Data
     /// <summary>
     /// this class sets up the xml file
     /// </summary>
-    public class InitializeDataFileXML
+    public static class InitializeDataFileXML
     {
         /// <summary>
         /// creates a web client and uses it to download data from the xml file

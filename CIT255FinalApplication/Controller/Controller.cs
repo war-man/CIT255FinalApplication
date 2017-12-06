@@ -182,6 +182,7 @@ namespace Controller
 
             using (responseBusiness)
             {
+                responseBusiness.AssignIsRainyDay();
                 response = responseBusiness.SelectAll();
                 //TODO: View: display fresh API pull form
             }

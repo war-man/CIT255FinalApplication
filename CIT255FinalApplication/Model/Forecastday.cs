@@ -57,8 +57,12 @@ namespace Model
         [XmlElement(ElementName = "minhumidity")]
         public string Minhumidity { get; set; }
         /// <summary>
-        /// this is a bool that does not come from the API, but is for internal use in the application
+        /// this is a bool that does not come from the API, but is for internal use in the application with business logic applied
         /// </summary>
         public bool IsPlantingDay { get; set; }
+        /// <summary>
+        /// this is another bool that does not come from the API, but is for internal use in the application with business logic applied (eg if Pop >= 50, IsRainyDay = true
+        /// </summary>
+        public bool IsRainyDay { get; set; }
     }
 }

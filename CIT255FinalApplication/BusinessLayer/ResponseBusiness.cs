@@ -59,6 +59,23 @@ namespace BusinessLayer
             return _responseRepository.SelectByPeriod(period);
         }
         
+        public void AssignIsRainyDay()
+        {
+            Response response = _responseRepository.SelectAll();
+
+            long lengthOfForecast = response.Forecast.Simpleforecast.Forecastdays.Forecastday.LongCount();
+
+            for (int index = 0; index < lengthOfForecast; index++)
+            {
+                Forecastday fd = response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index];
+                if (fd.Pop >= 50)
+                {
+                    fd.IsRainyDay = true;
+                }
+            }
+
+            _responseRepository.Save();
+        }
 
         /// <summary>
         /// Automatically assigns the IsPlantingDay bool for each day in the forecast, according to the business logic of checking the following day's percentage of precipitation, and if it is greater than 50%, then we say the day before is a planting day
@@ -68,14 +85,19 @@ namespace BusinessLayer
             Response response = _responseRepository.SelectAll();
 
             long lengthOfForecast = response.Forecast.Simpleforecast.Forecastdays.Forecastday.LongCount();
-
+            
+            //we only want to iterate through one less than the full forecast because our planting day logic is based on the weather forecast for the day after the current day, but we only know 10 days' worth of weather
             long oneLessThanFullList = lengthOfForecast - 1;
 
             for (long index = 0; index < oneLessThanFullList; index++)
             {
-                if (response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index + 1].Pop >= 50)
+                Forecastday fdToday = response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index];
+                Forecastday fdTomorrow = response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index + 1];
+                //our business logic is that a planting day cannot be a rainy day, but the day AFTER that day should be a rainy day
+                if (fdTomorrow.IsRainyDay == true
+                    && fdToday.IsRainyDay == false)
                 {
-                    response.Forecast.Simpleforecast.Forecastdays.Forecastday[(int)index].IsPlantingDay = true;
+                    fdToday.IsPlantingDay = true;
                 }
             }
 
