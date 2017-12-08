@@ -19,6 +19,7 @@ namespace Model
             CustomizePlantingDay,
             AutoFillPlantingDays,
             TogglePlantingDay,
+            CalendarOnly,
             Print,
             Exit
         }

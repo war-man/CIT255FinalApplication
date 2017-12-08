@@ -20,8 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherToPlant", "WeatherToPlant\WeatherToPlant.csproj", "{1F6397E6-58EE-4FEA-94DA-165966342F48}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Data\Data.projitems*{1f6397e6-58ee-4fea-94da-165966342f48}*SharedItemsImports = 4
 		Data\Data.projitems*{737d9607-0a98-4640-9896-1678d2c904ab}*SharedItemsImports = 13
 		Data\Data.projitems*{80aa2c12-b82c-45d4-9972-1c13236db457}*SharedItemsImports = 4
 		Data\Data.projitems*{d8786b16-bfb8-4f39-a795-c2957afdc199}*SharedItemsImports = 4
@@ -51,6 +54,10 @@ Global
 		{C403E0EC-B1F3-42EC-AE5F-F25E76AAB6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C403E0EC-B1F3-42EC-AE5F-F25E76AAB6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C403E0EC-B1F3-42EC-AE5F-F25E76AAB6CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6397E6-58EE-4FEA-94DA-165966342F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6397E6-58EE-4FEA-94DA-165966342F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6397E6-58EE-4FEA-94DA-165966342F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6397E6-58EE-4FEA-94DA-165966342F48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

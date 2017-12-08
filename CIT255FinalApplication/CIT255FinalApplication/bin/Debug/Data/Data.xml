@@ -1,0 +1,994 @@
+
+<response>
+	<version>0.1</version>
+	<termsofService>http://www.wunderground.com/weather/api/d/terms.html</termsofService>
+	<features>
+		<feature>forecast10day</feature>
+	</features>
+	<forecast>
+		<txt_forecast>
+		<date>5:06 PM EST</date>
+		<forecastdays>
+		<forecastday>
+		<period>0</period>
+		<icon>snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+		<title>Wednesday</title>
+		<fcttext><![CDATA[Snow likely. Lows overnight in the low 20s.]]></fcttext>
+		<fcttext_metric><![CDATA[Snow. Low -5C.]]></fcttext_metric>
+		<pop>90</pop>
+		</forecastday>
+		<forecastday>
+		<period>1</period>
+		<icon>nt_snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_snow.gif</icon_url>
+		<title>Wednesday Night</title>
+		<fcttext><![CDATA[Periods of snow. Low 22F. Winds WNW at 5 to 10 mph. Chance of snow 90%. 3 to 5 inches of snow expected.]]></fcttext>
+		<fcttext_metric><![CDATA[Periods of snow. Low near -5C. Winds WNW at 10 to 15 km/h. Chance of snow 100%. Snow accumulating 7-12cm.]]></fcttext_metric>
+		<pop>90</pop>
+		</forecastday>
+		<forecastday>
+		<period>2</period>
+		<icon>snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+		<title>Thursday</title>
+		<fcttext><![CDATA[Snow during the morning will diminish to a few snow showers during the afternoon. High 28F. Winds NW at 10 to 15 mph. Chance of snow 90%. Snow accumulating 1 to 3 inches.]]></fcttext>
+		<fcttext_metric><![CDATA[Snow during the morning will diminish to a few snow showers during the afternoon. High -2C. Winds NW at 10 to 15 km/h. Chance of snow 80%. 3-7cm of snow expected.]]></fcttext_metric>
+		<pop>90</pop>
+		</forecastday>
+		<forecastday>
+		<period>3</period>
+		<icon>nt_snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_snow.gif</icon_url>
+		<title>Thursday Night</title>
+		<fcttext><![CDATA[Variable clouds with snow showers or flurries. Low 21F. Winds WSW at 5 to 10 mph. Chance of snow 60%. Snow accumulations less than one inch.]]></fcttext>
+		<fcttext_metric><![CDATA[Variable clouds with snow showers or flurries. Low near -5C. Winds WSW at 10 to 15 km/h. Chance of snow 60%. Snow accumulations less than 2cm.]]></fcttext_metric>
+		<pop>60</pop>
+		</forecastday>
+		<forecastday>
+		<period>4</period>
+		<icon>snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+		<title>Friday</title>
+		<fcttext><![CDATA[Mainly cloudy with snow showers around in the morning. High 27F. Winds W at 10 to 15 mph. Chance of snow 60%. Snow accumulations less than one inch.]]></fcttext>
+		<fcttext_metric><![CDATA[Mainly cloudy with snow showers around in the morning. High -2C. Winds W at 15 to 25 km/h. Chance of snow 50%. Snow accumulations less than 2cm.]]></fcttext_metric>
+		<pop>60</pop>
+		</forecastday>
+		<forecastday>
+		<period>5</period>
+		<icon>nt_snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_snow.gif</icon_url>
+		<title>Friday Night</title>
+		<fcttext><![CDATA[Variably cloudy with snow showers. Low around 20F. Winds light and variable. Chance of snow 70%. 1 to 3 inches of snow expected.]]></fcttext>
+		<fcttext_metric><![CDATA[Variable clouds with snow showers. Low -6C. Winds light and variable. Chance of snow 60%. Snowfall of 2-3cm.]]></fcttext_metric>
+		<pop>70</pop>
+		</forecastday>
+		<forecastday>
+		<period>6</period>
+		<icon>snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+		<title>Saturday</title>
+		<fcttext><![CDATA[Cloudy with snow showers developing during the afternoon. High around 25F. Winds NNE at 10 to 20 mph. Chance of snow 40%.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy. Snow showers developing in the afternoon. High -3C. Winds NNE at 15 to 30 km/h. Chance of snow 40%.]]></fcttext_metric>
+		<pop>40</pop>
+		</forecastday>
+		<forecastday>
+		<period>7</period>
+		<icon>nt_cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_cloudy.gif</icon_url>
+		<title>Saturday Night</title>
+		<fcttext><![CDATA[Cloudy. A few flurries or snow showers possible. Low 18F. Winds NNW at 10 to 15 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy. A few flurries or snow showers possible. Low -7C. Winds NNW at 15 to 25 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>8</period>
+		<icon>cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+		<title>Sunday</title>
+		<fcttext><![CDATA[Cloudy skies. A few flurries or snow showers possible. High 28F. Winds WSW at 10 to 20 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy skies. A few flurries or snow showers possible. High -2C. Winds WSW at 15 to 30 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>9</period>
+		<icon>nt_chancesnow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_chancesnow.gif</icon_url>
+		<title>Sunday Night</title>
+		<fcttext><![CDATA[Cloudy. Snow showers developing after midnight. Low 26F. Winds W at 10 to 15 mph. Chance of snow 50%.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy with snow showers developing after midnight. Low -3C. Winds W at 15 to 25 km/h. Chance of snow 50%.]]></fcttext_metric>
+		<pop>50</pop>
+		</forecastday>
+		<forecastday>
+		<period>10</period>
+		<icon>snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+		<title>Monday</title>
+		<fcttext><![CDATA[Mainly cloudy with snow showers around in the morning. High 29F. Winds NNW at 10 to 20 mph. Chance of snow 50%. Snow accumulations less than one inch.]]></fcttext>
+		<fcttext_metric><![CDATA[Mainly cloudy with snow showers around in the morning. High -1C. Winds NNW at 15 to 30 km/h. Chance of snow 50%. Snow accumulations less than 2cm.]]></fcttext_metric>
+		<pop>50</pop>
+		</forecastday>
+		<forecastday>
+		<period>11</period>
+		<icon>nt_snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_snow.gif</icon_url>
+		<title>Monday Night</title>
+		<fcttext><![CDATA[Occasional snow showers. Low 16F. Winds N at 10 to 15 mph. Chance of snow 40%. Snowfall around one inch.]]></fcttext>
+		<fcttext_metric><![CDATA[Occasional snow showers. Low -8C. Winds N at 15 to 25 km/h. Chance of snow 40%. 2-3cm of snow expected.]]></fcttext_metric>
+		<pop>40</pop>
+		</forecastday>
+		<forecastday>
+		<period>12</period>
+		<icon>snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+		<title>Tuesday</title>
+		<fcttext><![CDATA[Snow showers. High 19F. Winds N at 5 to 10 mph. Chance of snow 50%. 1 to 3 inches of snow expected.]]></fcttext>
+		<fcttext_metric><![CDATA[Snow showers. High -7C. Winds N at 10 to 15 km/h. Chance of snow 50%. Snow accumulating 3-7cm.]]></fcttext_metric>
+		<pop>50</pop>
+		</forecastday>
+		<forecastday>
+		<period>13</period>
+		<icon>nt_snow</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_snow.gif</icon_url>
+		<title>Tuesday Night</title>
+		<fcttext><![CDATA[Snow showers early becoming more scattered later. Low 12F. Winds light and variable. Chance of snow 50%. Snowfall around one inch.]]></fcttext>
+		<fcttext_metric><![CDATA[Snow showers early with a chance of lingering snow showers later. Low -11C. Winds light and variable. Chance of snow 60%. Snowfall of 2-3cm.]]></fcttext_metric>
+		<pop>50</pop>
+		</forecastday>
+		<forecastday>
+		<period>14</period>
+		<icon>cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+		<title>Wednesday</title>
+		<fcttext><![CDATA[Cloudy skies. High 24F. Winds SW at 5 to 10 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy skies. High -4C. Winds SW at 10 to 15 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>15</period>
+		<icon>nt_cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_cloudy.gif</icon_url>
+		<title>Wednesday Night</title>
+		<fcttext><![CDATA[Cloudy skies. Low 18F. Winds WNW at 5 to 10 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Overcast. Low -7C. Winds WNW at 10 to 15 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>16</period>
+		<icon>cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+		<title>Thursday</title>
+		<fcttext><![CDATA[Cloudy. High 23F. Winds WNW at 10 to 15 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy. High -4C. Winds WNW at 15 to 25 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>17</period>
+		<icon>nt_cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_cloudy.gif</icon_url>
+		<title>Thursday Night</title>
+		<fcttext><![CDATA[Cloudy. Low 17F. Winds WNW at 5 to 10 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy. Low -8C. Winds WNW at 10 to 15 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>18</period>
+		<icon>cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+		<title>Friday</title>
+		<fcttext><![CDATA[Cloudy. High 21F. Winds WNW at 10 to 15 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy. High around -5C. Winds WNW at 15 to 25 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		<forecastday>
+		<period>19</period>
+		<icon>nt_cloudy</icon>
+		<icon_url>http://icons.wxug.com/i/c/k/nt_cloudy.gif</icon_url>
+		<title>Friday Night</title>
+		<fcttext><![CDATA[Cloudy skies. Low 16F. Winds W at 10 to 15 mph.]]></fcttext>
+		<fcttext_metric><![CDATA[Cloudy. Low -8C. Winds W at 15 to 25 km/h.]]></fcttext_metric>
+		<pop>20</pop>
+		</forecastday>
+		</forecastdays>
+		</txt_forecast>
+		<simpleforecast>
+		<forecastdays>
+		<forecastday>
+		<date>
+  <epoch>1512604800</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 06, 2017</pretty>
+  <day>6</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>339</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Wed</weekday_short>
+  <weekday>Wednesday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>1</period>
+					<high>
+						<fahrenheit>22</fahrenheit>
+						<celsius>-5</celsius>
+					</high>
+					<low>
+						<fahrenheit>22</fahrenheit>
+						<celsius>-6</celsius>
+					</low>
+					<conditions>Snow</conditions>
+					
+					<icon>snow</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>90</pop>
+					<qpf_allday>
+						<in>0.36</in>
+						<mm>9</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in></in>
+						<mm></mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.34</in>
+						<mm>9</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>3.8</in>
+						<cm>9.7</cm>
+					</snow_allday>
+					<snow_day>
+						<in></in>
+						<cm></cm>
+					</snow_day>
+					<snow_night>
+						<in>3.6</in>
+						<cm>9.1</cm>
+					</snow_night>
+					<maxwind>
+						<mph>22</mph>
+						<kph>35</kph>
+						<dir></dir>
+						<degrees>0</degrees>
+					</maxwind>
+					<avewind>
+						<mph>9</mph>
+						<kph>15</kph>
+						<dir>WSW</dir>
+						<degrees>255</degrees>
+					</avewind>
+					<avehumidity>73</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1512691200</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 07, 2017</pretty>
+  <day>7</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>340</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Thu</weekday_short>
+  <weekday>Thursday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>2</period>
+					<high>
+						<fahrenheit>28</fahrenheit>
+						<celsius>-2</celsius>
+					</high>
+					<low>
+						<fahrenheit>21</fahrenheit>
+						<celsius>-6</celsius>
+					</low>
+					<conditions>Snow</conditions>
+					
+					<icon>snow</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>90</pop>
+					<qpf_allday>
+						<in>0.17</in>
+						<mm>4</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.13</in>
+						<mm>3</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.04</in>
+						<mm>1</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>1.8</in>
+						<cm>4.6</cm>
+					</snow_allday>
+					<snow_day>
+						<in>1.3</in>
+						<cm>3.3</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.5</in>
+						<cm>1.3</cm>
+					</snow_night>
+					<maxwind>
+						<mph>15</mph>
+						<kph>24</kph>
+						<dir>NW</dir>
+						<degrees>312</degrees>
+					</maxwind>
+					<avewind>
+						<mph>10</mph>
+						<kph>16</kph>
+						<dir>NW</dir>
+						<degrees>312</degrees>
+					</avewind>
+					<avehumidity>67</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1512777600</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 08, 2017</pretty>
+  <day>8</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>341</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Fri</weekday_short>
+  <weekday>Friday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>3</period>
+					<high>
+						<fahrenheit>27</fahrenheit>
+						<celsius>-3</celsius>
+					</high>
+					<low>
+						<fahrenheit>20</fahrenheit>
+						<celsius>-7</celsius>
+					</low>
+					<conditions>Snow Showers</conditions>
+					
+					<icon>snow</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>60</pop>
+					<qpf_allday>
+						<in>0.16</in>
+						<mm>4</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.05</in>
+						<mm>1</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.10</in>
+						<mm>3</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>1.8</in>
+						<cm>4.6</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.6</in>
+						<cm>1.5</cm>
+					</snow_day>
+					<snow_night>
+						<in>1.2</in>
+						<cm>3.0</cm>
+					</snow_night>
+					<maxwind>
+						<mph>15</mph>
+						<kph>24</kph>
+						<dir>W</dir>
+						<degrees>281</degrees>
+					</maxwind>
+					<avewind>
+						<mph>11</mph>
+						<kph>18</kph>
+						<dir>W</dir>
+						<degrees>281</degrees>
+					</avewind>
+					<avehumidity>67</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1512864000</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 09, 2017</pretty>
+  <day>9</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>342</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Sat</weekday_short>
+  <weekday>Saturday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>4</period>
+					<high>
+						<fahrenheit>25</fahrenheit>
+						<celsius>-4</celsius>
+					</high>
+					<low>
+						<fahrenheit>18</fahrenheit>
+						<celsius>-8</celsius>
+					</low>
+					<conditions>Snow Showers</conditions>
+					
+					<icon>snow</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>40</pop>
+					<qpf_allday>
+						<in>0.02</in>
+						<mm>1</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.02</in>
+						<mm>1</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>0.3</in>
+						<cm>0.8</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.2</in>
+						<cm>0.5</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_night>
+					<maxwind>
+						<mph>20</mph>
+						<kph>32</kph>
+						<dir>NNE</dir>
+						<degrees>30</degrees>
+					</maxwind>
+					<avewind>
+						<mph>13</mph>
+						<kph>21</kph>
+						<dir>NNE</dir>
+						<degrees>30</degrees>
+					</avewind>
+					<avehumidity>77</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1512950400</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 10, 2017</pretty>
+  <day>10</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>343</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Sun</weekday_short>
+  <weekday>Sunday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>5</period>
+					<high>
+						<fahrenheit>28</fahrenheit>
+						<celsius>-2</celsius>
+					</high>
+					<low>
+						<fahrenheit>26</fahrenheit>
+						<celsius>-3</celsius>
+					</low>
+					<conditions>Overcast</conditions>
+					
+					<icon>cloudy</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>20</pop>
+					<qpf_allday>
+						<in>0.02</in>
+						<mm>1</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.02</in>
+						<mm>1</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>0.2</in>
+						<cm>0.5</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.2</in>
+						<cm>0.5</cm>
+					</snow_night>
+					<maxwind>
+						<mph>20</mph>
+						<kph>32</kph>
+						<dir>WSW</dir>
+						<degrees>240</degrees>
+					</maxwind>
+					<avewind>
+						<mph>13</mph>
+						<kph>21</kph>
+						<dir>WSW</dir>
+						<degrees>240</degrees>
+					</avewind>
+					<avehumidity>72</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1513036800</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 11, 2017</pretty>
+  <day>11</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>344</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Mon</weekday_short>
+  <weekday>Monday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>6</period>
+					<high>
+						<fahrenheit>29</fahrenheit>
+						<celsius>-2</celsius>
+					</high>
+					<low>
+						<fahrenheit>16</fahrenheit>
+						<celsius>-9</celsius>
+					</low>
+					<conditions>Snow Showers</conditions>
+					
+					<icon>snow</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>50</pop>
+					<qpf_allday>
+						<in>0.12</in>
+						<mm>3</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.05</in>
+						<mm>1</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.07</in>
+						<mm>2</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>1.5</in>
+						<cm>3.8</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.5</in>
+						<cm>1.3</cm>
+					</snow_day>
+					<snow_night>
+						<in>1.0</in>
+						<cm>2.5</cm>
+					</snow_night>
+					<maxwind>
+						<mph>20</mph>
+						<kph>32</kph>
+						<dir>NNW</dir>
+						<degrees>344</degrees>
+					</maxwind>
+					<avewind>
+						<mph>13</mph>
+						<kph>21</kph>
+						<dir>NNW</dir>
+						<degrees>344</degrees>
+					</avewind>
+					<avehumidity>74</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1513123200</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 12, 2017</pretty>
+  <day>12</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>345</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Tue</weekday_short>
+  <weekday>Tuesday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>7</period>
+					<high>
+						<fahrenheit>19</fahrenheit>
+						<celsius>-7</celsius>
+					</high>
+					<low>
+						<fahrenheit>12</fahrenheit>
+						<celsius>-11</celsius>
+					</low>
+					<conditions>Snow Showers</conditions>
+					
+					<icon>snow</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/snow.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>50</pop>
+					<qpf_allday>
+						<in>0.16</in>
+						<mm>4</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.10</in>
+						<mm>3</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.06</in>
+						<mm>2</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>2.4</in>
+						<cm>6.1</cm>
+					</snow_allday>
+					<snow_day>
+						<in>1.5</in>
+						<cm>3.8</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.9</in>
+						<cm>2.3</cm>
+					</snow_night>
+					<maxwind>
+						<mph>10</mph>
+						<kph>16</kph>
+						<dir>N</dir>
+						<degrees>349</degrees>
+					</maxwind>
+					<avewind>
+						<mph>9</mph>
+						<kph>14</kph>
+						<dir>N</dir>
+						<degrees>349</degrees>
+					</avewind>
+					<avehumidity>72</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1513209600</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 13, 2017</pretty>
+  <day>13</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>346</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Wed</weekday_short>
+  <weekday>Wednesday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>8</period>
+					<high>
+						<fahrenheit>24</fahrenheit>
+						<celsius>-4</celsius>
+					</high>
+					<low>
+						<fahrenheit>18</fahrenheit>
+						<celsius>-8</celsius>
+					</low>
+					<conditions>Overcast</conditions>
+					
+					<icon>cloudy</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>20</pop>
+					<qpf_allday>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_night>
+					<maxwind>
+						<mph>10</mph>
+						<kph>16</kph>
+						<dir>SW</dir>
+						<degrees>222</degrees>
+					</maxwind>
+					<avewind>
+						<mph>6</mph>
+						<kph>10</kph>
+						<dir>SW</dir>
+						<degrees>222</degrees>
+					</avewind>
+					<avehumidity>72</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1513296000</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 14, 2017</pretty>
+  <day>14</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>347</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Thu</weekday_short>
+  <weekday>Thursday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>9</period>
+					<high>
+						<fahrenheit>23</fahrenheit>
+						<celsius>-5</celsius>
+					</high>
+					<low>
+						<fahrenheit>17</fahrenheit>
+						<celsius>-8</celsius>
+					</low>
+					<conditions>Overcast</conditions>
+					
+					<icon>cloudy</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>20</pop>
+					<qpf_allday>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_night>
+					<maxwind>
+						<mph>15</mph>
+						<kph>24</kph>
+						<dir>WNW</dir>
+						<degrees>295</degrees>
+					</maxwind>
+					<avewind>
+						<mph>10</mph>
+						<kph>16</kph>
+						<dir>WNW</dir>
+						<degrees>295</degrees>
+					</avewind>
+					<avehumidity>75</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+				<forecastday>
+					<date>
+  <epoch>1513382400</epoch>
+  <pretty_short>7:00 PM EST</pretty_short>
+  <pretty>7:00 PM EST on December 15, 2017</pretty>
+  <day>15</day>
+  <month>12</month>
+  <year>2017</year>
+  <yday>348</yday>
+  <hour>19</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>December</monthname>
+  <monthname_short>Dec</monthname_short>
+  <weekday_short>Fri</weekday_short>
+  <weekday>Friday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>EST</tz_short>
+  <tz_long>America/New_York</tz_long>
+</date>
+					<period>10</period>
+					<high>
+						<fahrenheit>21</fahrenheit>
+						<celsius>-6</celsius>
+					</high>
+					<low>
+						<fahrenheit>16</fahrenheit>
+						<celsius>-9</celsius>
+					</low>
+					<conditions>Overcast</conditions>
+					
+					<icon>cloudy</icon>
+					<icon_url>http://icons.wxug.com/i/c/k/cloudy.gif</icon_url>
+					<skyicon></skyicon>
+					<pop>20</pop>
+					<qpf_allday>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_allday>
+					<qpf_day>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_day>
+					<qpf_night>
+						<in>0.00</in>
+						<mm>0</mm>
+					</qpf_night>
+					<snow_allday>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_allday>
+					<snow_day>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_day>
+					<snow_night>
+						<in>0.0</in>
+						<cm>0.0</cm>
+					</snow_night>
+					<maxwind>
+						<mph>15</mph>
+						<kph>24</kph>
+						<dir>WNW</dir>
+						<degrees>284</degrees>
+					</maxwind>
+					<avewind>
+						<mph>11</mph>
+						<kph>18</kph>
+						<dir>WNW</dir>
+						<degrees>284</degrees>
+					</avewind>
+					<avehumidity>74</avehumidity>
+					<maxhumidity>0</maxhumidity>
+					<minhumidity>0</minhumidity>
+				</forecastday>
+				
+			</forecastdays>
+		</simpleforecast>
+	</forecast>
+
+	
+	
+		
+	
+
+    
+    
+    
+	
+  
+	
+	
+	
+	
+	
+    
+    
+
+
+    
+    
+    
+    
+</response>
+	
