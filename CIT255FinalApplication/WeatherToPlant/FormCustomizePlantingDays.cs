@@ -155,6 +155,10 @@ namespace WeatherToPlant
                                 {
                                     picture.Image = Resources.raindrop;
                                 }
+                                else
+                                {
+                                    picture.Image = Resources.blankscreen;
+                                }
                                 break;
                             case AppEnum.ManagerAction.Print:
                                 break;
@@ -189,6 +193,76 @@ namespace WeatherToPlant
 
             this.Hide();
             formFreshApiPull.Show();
+        }
+
+        private void CommonClick_TogglePlantingDay(object sender, EventArgs e)
+        {
+            ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
+            Response response;
+
+            using (responseBusiness)
+            {
+                response = responseBusiness.SelectAll();
+            }
+
+            PictureBox picture = sender as PictureBox;
+
+            TogglePlantingDay(sender, response);
+
+            responseBusiness = null;
+
+            responseBusiness = new ResponseBusiness(_responseRepository);
+
+            using (responseBusiness)
+            {
+                response = responseBusiness.SelectAll();
+            }
+
+            FillWeatherDays(response, AppEnum.ManagerAction.TogglePlantingDay);
+        }
+
+        private void TogglePlantingDay(object sender, Response response)
+        {
+            int indexR = 0;
+
+            for (int r = 0; r < tblFreshAPI.RowCount; r++)
+            {
+                for (int c = 0; c < tblFreshAPI.ColumnCount; c++)
+                {
+                    Control control = tblFreshAPI.GetControlFromPosition(c, r);
+
+                    Forecastday fd = response.Forecast.Simpleforecast.Forecastdays.Forecastday[indexR];
+
+                    if (control is PictureBox)
+                    {
+                        PictureBox currentPB = control as PictureBox;
+
+                        if (currentPB == sender)
+                        {
+                            ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
+
+                            using (responseBusiness)
+                            {
+                                responseBusiness.TogglePlantingDay(fd.Period);
+                            }
+                        }
+                    }
+
+                    indexR += 1;
+
+                    if (c == 4)
+                    {
+                        if (r == 0)
+                        {
+                            indexR = 0;
+                        }
+                        else if (r == 2)
+                        {
+                            indexR = 5;
+                        }
+                    }
+                }
+            }
         }
     }
 }

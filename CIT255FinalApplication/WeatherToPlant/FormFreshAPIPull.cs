@@ -196,15 +196,6 @@ namespace WeatherToPlant
                             case AppEnum.ManagerAction.CustomizePlantingDay:
                                 break;
                             case AppEnum.ManagerAction.AutoFillPlantingDays:
-                                if (fd.IsPlantingDay)
-                                {
-                                    picture.Image = Resources.seedling;
-                                }
-                                else if (fd.IsRainyDay)
-                                {
-                                    picture.Image = Resources.raindrop;
-                                }
-                                break;
                             case AppEnum.ManagerAction.TogglePlantingDay:
                                 if (fd.IsPlantingDay)
                                 {
@@ -213,6 +204,10 @@ namespace WeatherToPlant
                                 else if (fd.IsRainyDay)
                                 {
                                     picture.Image = Resources.raindrop;
+                                }
+                                else
+                                {
+                                    picture.Image = Resources.blankscreen;
                                 }
                                 break;
                             case AppEnum.ManagerAction.Print:

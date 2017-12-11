@@ -128,6 +128,7 @@ namespace WeatherToPlant
             this.pictureBox10.Size = new System.Drawing.Size(76, 103);
             this.pictureBox10.TabIndex = 19;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox9
             // 
@@ -139,6 +140,7 @@ namespace WeatherToPlant
             this.pictureBox9.Size = new System.Drawing.Size(74, 103);
             this.pictureBox9.TabIndex = 18;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox8
             // 
@@ -150,6 +152,7 @@ namespace WeatherToPlant
             this.pictureBox8.Size = new System.Drawing.Size(74, 103);
             this.pictureBox8.TabIndex = 17;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox7
             // 
@@ -161,6 +164,7 @@ namespace WeatherToPlant
             this.pictureBox7.Size = new System.Drawing.Size(74, 103);
             this.pictureBox7.TabIndex = 16;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox6
             // 
@@ -172,6 +176,7 @@ namespace WeatherToPlant
             this.pictureBox6.Size = new System.Drawing.Size(74, 103);
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox5
             // 
@@ -183,6 +188,7 @@ namespace WeatherToPlant
             this.pictureBox5.Size = new System.Drawing.Size(76, 102);
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox4
             // 
@@ -194,6 +200,7 @@ namespace WeatherToPlant
             this.pictureBox4.Size = new System.Drawing.Size(74, 102);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox3
             // 
@@ -205,6 +212,7 @@ namespace WeatherToPlant
             this.pictureBox3.Size = new System.Drawing.Size(74, 102);
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // pictureBox2
             // 
@@ -216,6 +224,7 @@ namespace WeatherToPlant
             this.pictureBox2.Size = new System.Drawing.Size(74, 102);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // label5
             // 
@@ -317,6 +326,7 @@ namespace WeatherToPlant
             this.pictureBox1.Size = new System.Drawing.Size(74, 102);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.CommonClick_TogglePlantingDay);
             // 
             // btnCustomize
             // 
