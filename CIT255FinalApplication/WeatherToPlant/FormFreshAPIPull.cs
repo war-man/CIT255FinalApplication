@@ -12,6 +12,7 @@ using DAL;
 using Model;
 using WeatherToPlant.Properties;
 using Data;
+using System.Reflection;
 
 namespace WeatherToPlant
 {
@@ -19,14 +20,66 @@ namespace WeatherToPlant
     {
         static IResponseRepository _responseRepository;
 
-        public FormFreshAPIPull()
+        public FormFreshAPIPull(AppEnum.ManagerAction actionChoice)
         {
+            switch (actionChoice)
+            {
+                case AppEnum.ManagerAction.None:
+                case AppEnum.ManagerAction.WelcomePage:
+                    break;
+                case AppEnum.ManagerAction.GetWeather:
+                    FreshApiPullGetWeather();
+                    break;
+                case AppEnum.ManagerAction.CustomizePlantingDay:
+                    break;
+                case AppEnum.ManagerAction.AutoFillPlantingDays:
+                    FreshApiPullAutoFill();
+                    break;
+                case AppEnum.ManagerAction.TogglePlantingDay:
+                case AppEnum.ManagerAction.CalendarOnly:
+                case AppEnum.ManagerAction.Print:
+                case AppEnum.ManagerAction.Exit:
+                default:
+                    break;
+            }            
+        }
+
+        private void FreshApiPullAutoFill()
+        {
+            RefreshApiPull();
+
+            InitializeComponent();
+
+            SetButtonsAfterInitialGetWeather();
+
+            AutoFillPlantingDays();
+        }        
+
+        private void FreshApiPullGetWeather()
+        {
+            InitializeDataFileXML.PullDataApi();
+
+            _responseRepository = null;
+
             _responseRepository = new ResponseRepositoryXML();
-                       
 
             InitializeComponent();
 
             SetBlankCalendar();
+        }
+
+        private void SetButtonsAfterInitialGetWeather()
+        {
+            //
+            // we only want to show "Get Weather" button once. After they click it, they should only see a "Start Over" button at the buttom so they know they will lose their current data by pressing that button
+            //
+            btnGetWeather.Hide();
+            //
+            // the other buttons can now become visible
+            //
+            btnAutoFill.Show();
+            btnCustomize.Show();
+            btnStartOver.Show();
         }
 
         private void SetBlankCalendar()
@@ -48,17 +101,10 @@ namespace WeatherToPlant
         private void btnGetWeather_Click(object sender, EventArgs e)
         {
             AssignRainyDays();
+
             SetWeatherIcons();
-            //
-            // we only want to show "Get Weather" button once. After they click it, they should only see a "Start Over" button at the buttom so they know they will lose their current data by pressing that button
-            //
-            btnGetWeather.Hide();
-            //
-            // the other buttons can now become visible
-            //
-            btnAutoFill.Show();
-            btnCustomize.Show();
-            btnStartOver.Show();
+
+            SetButtonsAfterInitialGetWeather();
         }
 
         private void AssignRainyDays()
@@ -90,7 +136,7 @@ namespace WeatherToPlant
             int indexR = 0;
 
             for (int r = 0; r < tblFreshAPI.RowCount; r++)
-            {
+             {
                 for (int c = 0; c < tblFreshAPI.ColumnCount; c++)
                 {
                     Control control = tblFreshAPI.GetControlFromPosition(c, r);
@@ -183,21 +229,20 @@ namespace WeatherToPlant
                         indexR += 1;
                     }
                 }
-            }
-
-            //TODO: remove after debugging
-            DateTime now;
-            now = DateTime.Now;
-            label11.Text = now.TimeOfDay.ToString();
+            }            
         }
 
         private void btnStartOver_Click(object sender, EventArgs e)
         {
-            this.Refresh();            
-            
+            //ClearTable();
+
+            //FreshApiPullGetWeather();
+
+            this.Refresh();
+
             RefreshApiPull();
 
-            ClearTable(); 
+            ClearTable();
 
             SetWeatherIcons();
         }
@@ -228,6 +273,7 @@ namespace WeatherToPlant
 
         private void btnAutoFill_Click(object sender, EventArgs e)
         {
+            //TODO: change the Hide Show of the customize button to a grayed out version of the button instead
             btnCustomize.Hide();
 
             AutoFillPlantingDays();
@@ -248,7 +294,85 @@ namespace WeatherToPlant
 
             FillWeatherDays(response, AppEnum.ManagerAction.AutoFillPlantingDays);
         }
-        
-        
+
+        /// <summary>
+        /// Mohammad Dehghan: https://stackoverflow.com/questions/15629941/how-to-access-controls-event/15630068#15630068
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="eventName"></param>
+        /// <returns></returns>
+        public static Delegate[] RetrieveControlEventHandlers(Control c, string eventName)
+        {
+            Type type = c.GetType();
+            FieldInfo eventKeyField = GetStaticNonPublicFieldInfo(type, "Event" + eventName);
+            if (eventKeyField == null)
+            {
+                eventKeyField = GetStaticNonPublicFieldInfo(type, "EVENT_" + eventName.ToUpper());
+
+                if (eventKeyField == null)
+                {
+                    // Not all events in the WinForms controls use this pattern.
+                    // Other methods can be used to search for the event handlers if required.
+                    return null;
+                }
+            }
+
+            object eventKey = eventKeyField.GetValue(c);
+            PropertyInfo pi = type.GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance);
+            EventHandlerList list = (EventHandlerList)pi.GetValue(c, null);
+            Delegate del = list[eventKey];
+            if (del == null)
+            {
+                return null;
+            }
+            return del.GetInvocationList();
+        }
+
+        /// <summary>
+        /// Mohammad Dehghan: https://stackoverflow.com/questions/15629941/how-to-access-controls-event/15630068#15630068
+        /// Searches the inheritance hierarchy
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        private static FieldInfo GetStaticNonPublicFieldInfo(Type type, string name)
+        {
+            FieldInfo fi;
+
+            do
+            {
+                fi = type.GetField(name, BindingFlags.Static | BindingFlags.NonPublic);
+                type = type.BaseType;
+            } while (fi == null && type != null);
+
+            return fi;
+        }
+
+        public static List<Delegate> RetrieveAllAttachedEventHandlers(Control c)
+        {
+            List<Delegate> results = new List<Delegate>();
+            foreach (EventInfo ei in c.GetType().GetEvents())
+            {
+                var handlers = RetrieveControlEventHandlers(c, ei.Name);
+                if (handlers != null)
+                {
+                    results.AddRange(handlers);
+                }
+            }
+            return results;
+        }
+
+        public static List<Delegate> RetrieveAllAttachedEventHandlersInObject(Control c, object handlerContainerObject)
+        {
+            return RetrieveAllAttachedEventHandlers(c).Where(d => d.Target == handlerContainerObject).ToList();
+        }
+
+        private void btnCustomize_Click(object sender, EventArgs e)
+        {
+            FormCustomizePlantingDays formCustomizePlantingDays = new FormCustomizePlantingDays(_responseRepository);
+
+            this.Hide();
+            formCustomizePlantingDays.Show();
+        }
     }
 }

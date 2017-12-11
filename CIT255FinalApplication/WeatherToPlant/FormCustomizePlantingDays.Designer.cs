@@ -1,6 +1,8 @@
-﻿namespace WeatherToPlant
+﻿using System;
+
+namespace WeatherToPlant
 {
-    partial class FormFreshAPIPull
+    partial class FormCustomizePlantingDays
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +54,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCustomize = new System.Windows.Forms.Button();
             this.btnAutoFill = new System.Windows.Forms.Button();
-            this.btnGetWeather = new System.Windows.Forms.Button();
             this.tblFreshAPI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -76,7 +77,6 @@
             this.btnStartOver.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnStartOver.UseMnemonic = false;
             this.btnStartOver.UseVisualStyleBackColor = true;
-            this.btnStartOver.Visible = false;
             this.btnStartOver.Click += new System.EventHandler(this.btnStartOver_Click);
             // 
             // tblFreshAPI
@@ -326,8 +326,6 @@
             this.btnCustomize.TabIndex = 7;
             this.btnCustomize.Text = "Customize Planting Days";
             this.btnCustomize.UseVisualStyleBackColor = true;
-            this.btnCustomize.Visible = false;
-            this.btnCustomize.Click += new System.EventHandler(this.btnCustomize_Click);
             // 
             // btnAutoFill
             // 
@@ -337,31 +335,19 @@
             this.btnAutoFill.TabIndex = 8;
             this.btnAutoFill.Text = "Auto-Fill Planting Days";
             this.btnAutoFill.UseVisualStyleBackColor = true;
-            this.btnAutoFill.Visible = false;
             this.btnAutoFill.Click += new System.EventHandler(this.btnAutoFill_Click);
             // 
-            // btnGetWeather
-            // 
-            this.btnGetWeather.Location = new System.Drawing.Point(166, 368);
-            this.btnGetWeather.Name = "btnGetWeather";
-            this.btnGetWeather.Size = new System.Drawing.Size(93, 58);
-            this.btnGetWeather.TabIndex = 10;
-            this.btnGetWeather.Text = "Get Weather";
-            this.btnGetWeather.UseVisualStyleBackColor = true;
-            this.btnGetWeather.Click += new System.EventHandler(this.btnGetWeather_Click);
-            // 
-            // FormFreshAPIPull
+            // FormCustomizePlantingDays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 644);
-            this.Controls.Add(this.btnGetWeather);
             this.Controls.Add(this.btnAutoFill);
             this.Controls.Add(this.btnCustomize);
             this.Controls.Add(this.tblFreshAPI);
             this.Controls.Add(this.btnStartOver);
-            this.Name = "FormFreshAPIPull";
-            this.Text = "FormFreshAPIPull";
+            this.Name = "FormCustomizePlantingDays";
+            this.Text = "FormCustomizePlantingDays";
             this.tblFreshAPI.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -376,6 +362,7 @@
             this.ResumeLayout(false);
 
         }
+        
 
         #endregion
 
@@ -403,6 +390,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCustomize;
         private System.Windows.Forms.Button btnAutoFill;
-        private System.Windows.Forms.Button btnGetWeather;
     }
 }

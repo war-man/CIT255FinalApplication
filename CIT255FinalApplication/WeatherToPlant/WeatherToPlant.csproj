@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCustomizePlantingDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomizePlantingDays.Designer.cs">
+      <DependentUpon>FormCustomizePlantingDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFreshAPIPull.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormFreshAPIPull.Designer.cs">
       <DependentUpon>FormFreshAPIPull.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPreAPIPull.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPreAPIPull.Designer.cs">
-      <DependentUpon>FormPreAPIPull.cs</DependentUpon>
     </Compile>
     <Compile Include="FormWelcome.cs">
       <SubType>Form</SubType>
@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCustomizePlantingDays.resx">
+      <DependentUpon>FormCustomizePlantingDays.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFreshAPIPull.resx">
       <DependentUpon>FormFreshAPIPull.cs</DependentUpon>
     </EmbeddedResource>

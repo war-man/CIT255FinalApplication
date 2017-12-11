@@ -28,12 +28,10 @@ namespace WeatherToPlant
 
         private void btnBegin_Click(object sender, EventArgs e)
         {
-            //FormPreAPIPull formPreApiPull = new FormPreAPIPull(_responseRepository);
-            FormFreshAPIPull formFreshApiPull = new FormFreshAPIPull();           
+            FormFreshAPIPull formFreshApiPull = new FormFreshAPIPull(AppEnum.ManagerAction.GetWeather);           
 
             this.Hide();
             formFreshApiPull.Show();
-            //formPreApiPull.Show();
         }
     }
 }
