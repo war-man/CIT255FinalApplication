@@ -17,13 +17,37 @@ namespace WeatherToPlant
     {
         static IResponseRepository _responseRepository;
 
-        public FormWelcome()
+        public FormWelcome(AppEnum.ManagerAction actionChoice)
         {
-            InitializeDataFileXML.PullDataApi();
-            //TODO: make sure you really DON'T need the repository here... don't think so
-            //_responseRepository = new ResponseRepositoryXML();
+            switch (actionChoice)
+            {
+                case AppEnum.ManagerAction.None:
+                    break;
+                case AppEnum.ManagerAction.WelcomePage:
+                    InitializeDataFileXML.PullDataApi();
+                    //TODO: make sure you really DON'T need the repository here... don't think so
+                    //_responseRepository = new ResponseRepositoryXML();
 
-            InitializeComponent();
+                    InitializeComponent();
+                    break;
+                case AppEnum.ManagerAction.GetWeather:
+                    break;
+                case AppEnum.ManagerAction.CustomizePlantingDay:
+                    break;
+                case AppEnum.ManagerAction.AutoFillPlantingDays:
+                    break;
+                case AppEnum.ManagerAction.TogglePlantingDay:
+                    break;
+                case AppEnum.ManagerAction.CalendarOnly:
+                    break;
+                case AppEnum.ManagerAction.Print:
+                    break;
+                case AppEnum.ManagerAction.Exit:
+                    Close();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void btnBegin_Click(object sender, EventArgs e)
@@ -32,9 +56,9 @@ namespace WeatherToPlant
 
             this.Hide();
             formFreshApiPull.Show();
-        }
+        }        
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             Close();
         }

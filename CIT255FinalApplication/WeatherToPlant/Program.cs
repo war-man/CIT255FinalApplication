@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace WeatherToPlant
 {
@@ -16,7 +17,7 @@ namespace WeatherToPlant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormWelcome());
+            Application.Run(new FormWelcome(AppEnum.ManagerAction.WelcomePage));
         }
     }
 }

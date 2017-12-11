@@ -54,6 +54,7 @@ namespace WeatherToPlant
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCustomize = new System.Windows.Forms.Button();
             this.btnAutoFill = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.tblFreshAPI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -65,6 +66,7 @@ namespace WeatherToPlant
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStartOver
@@ -347,15 +349,28 @@ namespace WeatherToPlant
             this.btnAutoFill.UseVisualStyleBackColor = true;
             this.btnAutoFill.Click += new System.EventHandler(this.btnAutoFill_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = global::WeatherToPlant.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Location = new System.Drawing.Point(402, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(24, 24);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FormCustomizePlantingDays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 644);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAutoFill);
             this.Controls.Add(this.btnCustomize);
             this.Controls.Add(this.tblFreshAPI);
             this.Controls.Add(this.btnStartOver);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCustomizePlantingDays";
             this.Text = "FormCustomizePlantingDays";
             this.tblFreshAPI.ResumeLayout(false);
@@ -369,6 +384,7 @@ namespace WeatherToPlant
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +416,6 @@ namespace WeatherToPlant
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCustomize;
         private System.Windows.Forms.Button btnAutoFill;
+        private System.Windows.Forms.PictureBox btnExit;
     }
 }

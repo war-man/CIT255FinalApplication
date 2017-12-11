@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Pull weather from the Weather Uunderground API and see the 10-day forecast with "rainy" days including all days with a percentage chance of precipitation higher than 50%.  You can see suggested planting days by choosing "Auto Fill", or select your own planting days by choosing "Customize".</value>
+  </data>
 </root>
