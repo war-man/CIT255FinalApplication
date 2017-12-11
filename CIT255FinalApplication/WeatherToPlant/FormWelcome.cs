@@ -25,8 +25,6 @@ namespace WeatherToPlant
                     break;
                 case AppEnum.ManagerAction.WelcomePage:
                     InitializeDataFileXML.PullDataApi();
-                    //TODO: make sure you really DON'T need the repository here... don't think so
-                    //_responseRepository = new ResponseRepositoryXML();
 
                     InitializeComponent();
                     break;

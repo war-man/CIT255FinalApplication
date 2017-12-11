@@ -7,6 +7,9 @@ using System.Xml.Serialization;
 
 namespace Model
 {
+    /// <summary>
+    /// XML to C# conversion courtesy of http://xmltocsharp.azurewebsites.net/
+    /// </summary>
     [XmlRoot(ElementName = "forecastday")]
     public class Forecastday
     {
