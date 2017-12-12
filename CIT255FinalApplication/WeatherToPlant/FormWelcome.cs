@@ -13,39 +13,19 @@ using Data;
 
 namespace WeatherToPlant
 {
+    /// <summary>
+    /// The first form you come to
+    /// </summary>
     public partial class FormWelcome : Form
     {
-        static IResponseRepository _responseRepository;
-
-        public FormWelcome(AppEnum.ManagerAction actionChoice)
+        /// <summary>
+        /// The constructor for this form that pulls the weather data from the Api
+        /// </summary>
+        public FormWelcome()
         {
-            switch (actionChoice)
-            {
-                case AppEnum.ManagerAction.None:
-                    break;
-                case AppEnum.ManagerAction.WelcomePage:
-                    InitializeDataFileXML.PullDataApi();
+            InitializeDataFileXML.PullDataApi();
 
-                    InitializeComponent();
-                    break;
-                case AppEnum.ManagerAction.GetWeather:
-                    break;
-                case AppEnum.ManagerAction.CustomizePlantingDay:
-                    break;
-                case AppEnum.ManagerAction.AutoFillPlantingDays:
-                    break;
-                case AppEnum.ManagerAction.TogglePlantingDay:
-                    break;
-                case AppEnum.ManagerAction.CalendarOnly:
-                    break;
-                case AppEnum.ManagerAction.Print:
-                    break;
-                case AppEnum.ManagerAction.Exit:
-                    Close();
-                    break;
-                default:
-                    break;
-            }
+            InitializeComponent();
         }
 
         private void btnBegin_Click(object sender, EventArgs e)

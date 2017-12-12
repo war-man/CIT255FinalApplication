@@ -17,7 +17,7 @@ namespace WeatherToPlant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormWelcome(AppEnum.ManagerAction.WelcomePage));
+            Application.Run(new FormWelcome());
         }
     }
 }

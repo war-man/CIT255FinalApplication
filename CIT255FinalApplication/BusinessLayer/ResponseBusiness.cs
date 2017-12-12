@@ -58,7 +58,10 @@ namespace BusinessLayer
         {
             return _responseRepository.SelectByPeriod(period);
         }
-        
+
+        /// <summary>
+        /// Automatically assigns the IsRainyDay bool for each day in the forecast, according to the business logic of greater than 50% chance of precipitation is a rainy day
+        /// </summary>
         public void AssignIsRainyDay()
         {
             Response response = _responseRepository.SelectAll();
