@@ -26,7 +26,6 @@ namespace Data
                 using (WebClient client = new WebClient())
                 {
                     string value = client.DownloadString(DataSettings.dataFilePathAPI);
-                    //File.AppendAllText(Data.DataSettings.dataFilePathLocal, value);
                     File.WriteAllText(DataSettings.dataFilePathLocal, value);
                 }
             }
