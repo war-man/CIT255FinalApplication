@@ -16,10 +16,17 @@ using System.Reflection;
 
 namespace WeatherToPlant
 {
+    /// <summary>
+    /// The form where the weather data is retrieved and placed onto a calendar
+    /// </summary>
     public partial class FormFreshAPIPull : Form
     {
         static IResponseRepository _responseRepository;
 
+        /// <summary>
+        /// The constructor for this form. Allows you to open this form from multiple places and jump to different functionality depending on the enum passed in
+        /// </summary>
+        /// <param name="actionChoice"></param>
         public FormFreshAPIPull(AppEnum.ManagerAction actionChoice)
         {
             switch (actionChoice)
@@ -44,6 +51,9 @@ namespace WeatherToPlant
             }            
         }
 
+        /// <summary>
+        /// This refreshes the data from the API, initializes the winforms components, hides the GetWeather buttons and shows the other buttons, and then fills the calendar with the planting days
+        /// </summary>
         private void FreshApiPullAutoFill()
         {
             RefreshApiPull();
@@ -55,6 +65,9 @@ namespace WeatherToPlant
             AutoFillPlantingDays();
         }        
 
+        /// <summary>
+        /// This refreshes the data and initializes the form with a calendar using the days from the forecast, but leaving the contents empty to allow the user to click on a Get Weather button themselves
+        /// </summary>
         private void FreshApiPullGetWeather()
         {
             InitializeDataFileXML.PullDataApi();
@@ -68,20 +81,21 @@ namespace WeatherToPlant
             SetBlankCalendar();
         }
 
+        /// <summary>
+        /// This hides the GetWeather button and shows the other buttons because we only want to show "Get Weather" button once. After they click it, they should only see a "Start Over" button at the buttom so they know they will lose their current data by pressing that button
+        /// </summary>
         private void SetButtonsAfterInitialGetWeather()
         {
-            //
-            // we only want to show "Get Weather" button once. After they click it, they should only see a "Start Over" button at the buttom so they know they will lose their current data by pressing that button
-            //
             btnGetWeather.Hide();
-            //
-            // the other buttons can now become visible
-            //
+
             btnAutoFill.Show();
             btnCustomize.Show();
             btnStartOver.Show();
         }
 
+        /// <summary>
+        /// Define a response object from the repository and use it to fill the calendar with the names of the days of the week, but nothing else
+        /// </summary>
         private void SetBlankCalendar()
         {
             // get the weather, but only display the days for now
@@ -98,6 +112,11 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.CalendarOnly);
         }
 
+        /// <summary>
+        /// Event handler for the GetWeather button: Assigns the rainy day logic, displays the weather icons on the calendar, and adjusts the UI buttons on the screen accordingly
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGetWeather_Click(object sender, EventArgs e)
         {
             AssignRainyDays();
@@ -107,6 +126,9 @@ namespace WeatherToPlant
             SetButtonsAfterInitialGetWeather();
         }
 
+        /// <summary>
+        /// Calls the AssignRainyDay() method from the business class repository
+        /// </summary>
         private void AssignRainyDays()
         {
             ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
@@ -117,6 +139,9 @@ namespace WeatherToPlant
             }
         }
 
+        /// <summary>
+        /// Fills the calendar with icons for the weather
+        /// </summary>
         private void SetWeatherIcons()
         {
             ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
@@ -131,6 +156,11 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.GetWeather);
         }
 
+        /// <summary>
+        /// A method that iterates through the table layout panel for the calendar, and depending on the enum that gets sent to it, will either fill in only the names of the days of the week, the days plus the weather icons, or all of the above with the planting days too
+        /// </summary>
+        /// <param name="response"></param>
+        /// <param name="actionChoice"></param>
         private void FillWeatherDays(Response response, AppEnum.ManagerAction actionChoice)
         {
             int indexR = 0;
@@ -227,12 +257,13 @@ namespace WeatherToPlant
             }            
         }
 
+        /// <summary>
+        /// Event handler for the StartOver button. Refreshes the data from the API, clears the current calendar, and resets the weather icons
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStartOver_Click(object sender, EventArgs e)
         {
-            //ClearTable();
-
-            //FreshApiPullGetWeather();
-
             this.Refresh();
 
             RefreshApiPull();
@@ -242,6 +273,9 @@ namespace WeatherToPlant
             SetWeatherIcons();
         }
 
+        /// <summary>
+        /// removes all images from the table layout panel for the calendar, but keeps the days of the week visible
+        /// </summary>
         private void ClearTable()
         {
             ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
@@ -255,6 +289,9 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.CalendarOnly);
         }
 
+        /// <summary>
+        /// nullifies the response repository, and refreshes the data from the API, saving the new data to a newly instantiated repository, then assigns rainy day logic
+        /// </summary>
         private void RefreshApiPull()
         {
             InitializeDataFileXML.PullDataApi();
@@ -266,16 +303,19 @@ namespace WeatherToPlant
             AssignRainyDays();
         }
 
+        /// <summary>
+        /// event handler for the Auto Fill button: applies the business logic for planting days, and displays it on the screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAutoFill_Click(object sender, EventArgs e)
         {
-            //TODO: change the Hide Show of the customize button to a grayed out version of the button instead
-            btnCustomize.Hide();
-
             AutoFillPlantingDays();
-
-            btnCustomize.Show();
         }
 
+        /// <summary>
+        /// instantiates a business repository and uses that to apply the business logic for planting days, and saves that business repository to a reponse object, and passes that into the method that fills the table layout panel calendar with weather and planting days both
+        /// </summary>
         private void AutoFillPlantingDays()
         {
             ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
@@ -290,6 +330,11 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.AutoFillPlantingDays);
         }        
 
+        /// <summary>
+        /// event handler for the customize button. closes the current form and opens a customize form, passing the response repository into it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCustomize_Click(object sender, EventArgs e)
         {
             FormCustomizePlantingDays formCustomizePlantingDays = new FormCustomizePlantingDays(_responseRepository);
@@ -298,6 +343,11 @@ namespace WeatherToPlant
             formCustomizePlantingDays.Show();
         }
 
+        /// <summary>
+        /// event handler for the exit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

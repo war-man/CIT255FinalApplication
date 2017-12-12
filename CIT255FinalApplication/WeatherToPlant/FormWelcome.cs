@@ -28,6 +28,11 @@ namespace WeatherToPlant
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Closes the current form and opens the api pull form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBegin_Click(object sender, EventArgs e)
         {
             FormFreshAPIPull formFreshApiPull = new FormFreshAPIPull(AppEnum.ManagerAction.GetWeather);           
@@ -36,6 +41,11 @@ namespace WeatherToPlant
             formFreshApiPull.Show();
         }        
 
+        /// <summary>
+        /// closes the form and ends the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Close();

@@ -14,10 +14,17 @@ using WeatherToPlant.Properties;
 
 namespace WeatherToPlant
 {
+    /// <summary>
+    /// A form used to toggle each day between planting day or non-planting day
+    /// </summary>
     public partial class FormCustomizePlantingDays : Form
     {
         static IResponseRepository _responseRepository;
 
+        /// <summary>
+        /// the constructor for this form that fills a calendar with existing data from the API and the business logic from planting days
+        /// </summary>
+        /// <param name="responseRepository"></param>
         public FormCustomizePlantingDays(IResponseRepository responseRepository)
         {
             _responseRepository = responseRepository;
@@ -29,6 +36,9 @@ namespace WeatherToPlant
             AutoFillPlantingDays();
         }
 
+        /// <summary>
+        /// instantiates a business repository and uses that to apply the business logic for planting days, and saves that business repository to a reponse object, and passes that into the method that fills the table layout panel calendar with weather and planting days both
+        /// </summary>
         private void AutoFillPlantingDays()
         {
             ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
@@ -43,6 +53,9 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.AutoFillPlantingDays);
         }
 
+        /// <summary>
+        /// Define a response object from the repository and use it to fill the calendar with the names of the days of the week, but nothing else
+        /// </summary>
         private void SetBlankCalendar()
         {
             // get the weather, but only display the days for now
@@ -59,19 +72,11 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.CalendarOnly);
         }
 
-        private void SetWeatherIcons()
-        {
-            ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
-            Response response;
-
-            using (responseBusiness)
-            {
-                response = responseBusiness.SelectAll();
-            }
-
-            FillWeatherDays(response, AppEnum.ManagerAction.GetWeather);
-        }
-
+        /// <summary>
+        /// A method that iterates through the table layout panel for the calendar, and depending on the enum that gets sent to it, will either fill in only the names of the days of the week, the days plus the weather icons, or all of the above with the planting days too
+        /// </summary>
+        /// <param name="response"></param>
+        /// <param name="actionChoice"></param>
         private void FillWeatherDays(Response response, AppEnum.ManagerAction actionChoice)
         {
             int indexR = 0;
@@ -177,7 +182,11 @@ namespace WeatherToPlant
             }
         }
 
-
+        /// <summary>
+        /// Event handler for the StartOver button. Closes the current form and opens the api pull form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStartOver_Click(object sender, EventArgs e)
         {
             FormFreshAPIPull formFreshApiPull = new FormFreshAPIPull(AppEnum.ManagerAction.GetWeather);
@@ -186,7 +195,11 @@ namespace WeatherToPlant
             formFreshApiPull.Show();
         }
         
-
+        /// <summary>
+        /// event handler for the AutoFill button. closes the current form and opens the api pull form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAutoFill_Click(object sender, EventArgs e)
         {
             FormFreshAPIPull formFreshApiPull = new FormFreshAPIPull(AppEnum.ManagerAction.AutoFillPlantingDays);
@@ -195,6 +208,11 @@ namespace WeatherToPlant
             formFreshApiPull.Show();
         }
 
+        /// <summary>
+        /// the event handler for all picture boxes in the table layout panel calendar that allows the user to toggle back and forth between having a day be a planting day or not
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CommonClick_TogglePlantingDay(object sender, EventArgs e)
         {
             ResponseBusiness responseBusiness = new ResponseBusiness(_responseRepository);
@@ -221,6 +239,11 @@ namespace WeatherToPlant
             FillWeatherDays(response, AppEnum.ManagerAction.TogglePlantingDay);
         }
 
+        /// <summary>
+        /// Iterate through the calendar and find the picture box that matches the sender (the clicked object), and then change that forecast day's IsPlantingDay bool, and updates the picture to reflect that change
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="response"></param>
         private void TogglePlantingDay(object sender, Response response)
         {
             int indexR = 0;
@@ -265,6 +288,11 @@ namespace WeatherToPlant
             }
         }
 
+        /// <summary>
+        /// event handler for the exit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
