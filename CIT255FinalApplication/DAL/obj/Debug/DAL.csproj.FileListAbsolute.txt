@@ -5,3 +5,10 @@ H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\bin\Debug\
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\bin\Debug\Model.pdb
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\obj\Debug\DAL.dll
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\obj\Debug\DAL.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\bin\Debug\DAL.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\bin\Debug\DAL.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\bin\Debug\Model.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\bin\Debug\Model.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\obj\Debug\DAL.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\DAL\obj\Debug\DAL.pdb

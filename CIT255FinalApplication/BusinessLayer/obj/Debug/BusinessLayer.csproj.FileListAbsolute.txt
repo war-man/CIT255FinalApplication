@@ -7,3 +7,12 @@ H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\Model.pdb
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\obj\Debug\BusinessLayer.dll
 H:\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\DAL.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\Model.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\DAL.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\bin\Debug\Model.pdb
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Lianna\Documents\CIT 255 .NET O-O\CIT255FinalApplication\CIT255FinalApplication\BusinessLayer\obj\Debug\BusinessLayer.pdb
