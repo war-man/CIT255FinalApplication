@@ -15,3 +15,9 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+#tell linguist to ignore css
+*.css linguist-vendored
+*.html linguist-vendored
+*.rp linguist-vendored
+*.js linguist-vendored
